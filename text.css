@@ -1,6 +1,12 @@
 .text{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-right: 125px;
+}
+
+.text p{
+    flex-grow: 1;
 }
 
 h2{
@@ -12,12 +18,24 @@ h2{
     color: #333333;
 }
 
+@media (max-width:767px){
+    h2{
+    text-align: center;
+    }
+}
+
 h3{
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.15;
     margin-bottom: 48px;
     color: #333333;
+}
+
+@media (max-width:767px){
+    h3{
+    text-align: center;
+    }
 }
 
 p{
@@ -28,11 +46,27 @@ p{
     color: #333333;
 }
 
+@media (max-width:767px){
+   p{
+       text-align: center;
+   }
+}
+
 .text img{
     margin-top: 235px;
+    width: 24px;
+    height: 24px;
 }
 
 .first{
     transform: rotate(180deg);
     margin-right: 10px;
 }
+
+
+
+@media (max-width:767px){
+    .text img{
+        display: none;
+    }
+ }

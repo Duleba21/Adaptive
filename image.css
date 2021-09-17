@@ -1,10 +1,20 @@
 .images{
+    width: 635px;
+    height: 409px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 100%;
-    justify-items: center;
-    align-items: end;
-    grid-row-gap: 30px;
-    grid-column-gap: 30px;
-}
+    grid-template: "ships bridge" 144px
+                   "river bridge" 89px
+                   "river bildings" 144px/350px 255px;
+    gap: 30px;
+                   
+ }
+
+@media (max-width:767px){
+    .images{
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+    }
+ }
