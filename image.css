@@ -1,20 +1,44 @@
 .images{
-    width: 635px;
-    height: 409px;
+  
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 55.118fr 40.1575fr);
     width: 100%;
-    grid-template: "ships bridge" 144px
-                   "river bridge" 89px
-                   "river bildings" 144px/350px 255px;
-    gap: 30px;
-                   
+    grid-template-areas: "ships bridge" 
+                         "river bridge" 
+                         "river bildings";
+    gap: 25px;    
+    align-self: stretch;
+    margin-top: 276px;           
  }
 
 @media (max-width:767px){
     .images{
-    grid-row-gap: 8px;
-    grid-column-gap: 8px;
+    margin-top: 20px;
+    justify-items: center;
     }
+ }
+
+
+ @media (max-width:1200px){
+    .images{
+    grid-template-rows: repeat(3, 144px 89px 144px);
+    margin-top: 265px;
+    justify-items: center;
+    }
+ }
+
+ .ships{
+     grid-area: ships;
+ }
+ 
+ .bridge{
+     grid-area: bridge;
+ }
+
+ .river{
+     grid-area: river;
+ }
+
+ .bildings{
+     grid-area: bildings;
  }
